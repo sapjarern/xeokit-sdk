@@ -31,6 +31,59 @@ declare const math: {
   vec4: (values?: number[]) => number[];
 
   /**
+   * Returns a new, uninitialized four-element vector.
+   * @returns {Number[]}
+   */
+  mat3: (values?: number[]) => number[];
+
+  /**
+   * Returns a new, uninitialized four-element vector.
+   * @returns {Number[]}
+   */
+  mat4: (values?: number[]) => number[];
+
+  /**
+   * Converts a 3x3 matrix to 4x4
+   * @method mat3ToMat4
+   * @param {Number[]} mat3 3x3 matrix.
+   * @param {Number[]} mat4 4x4 matrix
+   * @static
+   * @returns {Number[]}
+   */
+  mat3ToMat4: (mat3: number[], mat4?: number[]) => number[];
+
+  /**
+   * Negates a four-element vector.
+   * @method negateVec3
+   * @static
+   * @param {Array(Number)} v Vector to negate
+   * @param  {Array(Number)} [dest] Destination vector
+   * @return {Array(Number)} dest if specified, v otherwise
+   */
+  negateVec3: (v: number[], dest: number[]) => number[];
+
+  /**
+   * Negates a four-element vector.
+   * @method negateVec4
+   * @static
+   * @param {Array(Number)} v Vector to negate
+   * @param  {Array(Number)} [dest] Destination vector
+   * @return {Array(Number)} dest if specified, v otherwise
+   */
+  negateVec4: (v: number[], dest: number[]) => number[];
+
+  /**
+   * Adds one four-element vector to another.
+   * @method addVec4
+   * @static
+   * @param {Array(Number)} u First vector
+   * @param {Array(Number)} v Second vector
+   * @param  {Array(Number)} [dest] Destination vector
+   * @return {Array(Number)} dest if specified, u otherwise
+   */
+  addVec4: (u: number[], v: number[], dest: number[]) => number[];
+
+  /**
    * Gets the center of a 2D AABB.
    * @returns {Number[]}
    */
@@ -50,7 +103,7 @@ declare const math: {
   /**
    * Normalizes a three-element vector
    */
-   normalizeVec3: (v: number[], dest?: any) => number[];
+  normalizeVec3: (v: number[], dest?: any) => number[];
 };
 
-export {math};
+export { math };
